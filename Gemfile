@@ -13,3 +13,14 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
+# Social Intelligence Gems
+# ========================
+# These dependencies were found throughout the chapters and the README.txt files
+# provided in downloadable code at http://www.apress.com. At the time of this
+# writing (October 13, 2015), the direct links were:
+# Book - http://www.apress.com/9781430223511
+# File - http://www.apress.com/downloadable/download/sample/sample_id/340/
+
+# Chapter 1 - See src/part1/README.txt
+# Included: [rubygems, nokogiri and open-uri]
+# Required in ./si_engine.rb
