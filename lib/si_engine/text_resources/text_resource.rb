@@ -33,7 +33,8 @@ module SiEngine
     def cleanup_plain_text(text)
       text.gsub!('>', '> ')
       if text.index('<') && text.index('>') # probably HTML
-        text = HTML::FullSanitizer.new.sanitize(text)
+        # Originally HTML::FullSanitizer.new.sanitize(text)
+        text = Rails::Html::FullSanitizer.new.sanitize(text)
       end
       remove_extra_whitespace(text)
     end
@@ -49,7 +50,7 @@ module SiEngine
     # TODO: Add ClassifierAndSummarization class
     # TODO: Add EntityExtraction class
     # TODO: SentimentOfText class
-    # def process_text_semantics! text
+    def process_text_semantics! text
     #   cs = ClassifierAndSummarization.new
     #   cs.train([['wikipedia_text/computers.txt', "Computers"],
     #            ['wikipedia_text/economy.txt', "Economy"],
@@ -65,6 +66,6 @@ module SiEngine
     #   @place_names = ee.place_names
     #   st = SentimentOfText.new
     #   @sentiment_rating = st.get_sentiment(@plain_text)
-    # end
+    end
   end
 end
