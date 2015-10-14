@@ -47,7 +47,7 @@ gem 'ffi-aspell'
 # gem 'classifier'
 # gem 'simplehttp'
 # gem 'clusterer'
-# gem 'simple-rss'
+gem 'simple-rss' # May switch to feedjira
 # gem 'atom'
 gem 'rubyzip'
 
