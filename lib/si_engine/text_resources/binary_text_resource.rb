@@ -6,12 +6,24 @@
 # =>        ClassifierWordCountStatistics, SentimentOfText, EntityExtraction]
 
 module SiEngine
-  class PlainTextResource < TextResource
+  class BinaryTextResource < TextResource
     def initialize(source_uri='')
+      puts "++ enterd BinararyPlainTextResource constructor"
       super(source_uri)
       file = open(source_uri)
-      @plain_text = cleanup_plain_text(file.read)
+      text = file.read
+      text = remove_noise_characters(text)
+      text = remove_words_not_in_spelling_dictionary(text)
+      @plain_text = cleanup_plain_text(text)
       process_text_semantics!(@plain_text) # Added the !. Missing from original file.
+    end
+
+    def remove_noise_characters(text)
+      text # stub: will be implemented in chapter 2
+    end
+
+    def remove_words_not_in_spelling_dictionary(text)
+      text # stub: will be implemented in chapter 2
     end
   end
 end
