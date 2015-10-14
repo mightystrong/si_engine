@@ -47,8 +47,10 @@ gem 'ffi-aspell'
 # gem 'classifier'
 # gem 'simplehttp'
 # gem 'clusterer'
-gem 'simple-rss' # May switch to feedjira
+# Switched rss / atom gems to feedjira, which accomplishes both
+# gem 'simple-rss'
 # gem 'atom'
+gem 'feedjira'
 gem 'rubyzip'
 
 # Chapter 1 - See src/part1/README.txt
