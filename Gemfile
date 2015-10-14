@@ -35,7 +35,7 @@ gemspec
 # On Mac OS X, you can install the MacPorts utility, then do:
 # sudo port install aspell
 #
-# On most Linu systems, you can install ASpell using:
+# On most Linu systems, you can install ASpell using: // You may also use homebrew
 #
 # apt-get install aspell
 # sudo port install aspell-dict-en
@@ -47,11 +47,16 @@ gem 'ffi-aspell'
 # gem 'classifier'
 # gem 'simplehttp'
 # gem 'clusterer'
+
 # Switched rss / atom gems to feedjira, which accomplishes both
 # gem 'simple-rss'
 # gem 'atom'
 gem 'feedjira'
+
 gem 'rubyzip'
+
+# This is a packaged version of the original rexml from github.
+# Include in the same was a documented in
 gem 'rubysl-rexml'
 
 # Chapter 1 - See src/part1/README.txt
