@@ -49,7 +49,7 @@ gem 'ffi-aspell'
 # gem 'clusterer'
 # gem 'simple-rss'
 # gem 'atom'
-# gem 'rubyzip'
+gem 'rubyzip'
 
 # Chapter 1 - See src/part1/README.txt
 # Included: [rubygems, nokogiri and open-uri]

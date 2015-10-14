@@ -1,4 +1,4 @@
-# Originally in one file see src/part1/text-resource.rb
+# This class was originally included in one file; see src/part1/text-resource.rb
 # The various classes have been broken down into separate files for readability.
 # Classes: [TextResource, PlainTextResource, BinararyPlainTextResource,
 # =>        HtmlXhtmlResource, OpenDocumentResource, RssResource, AtomResource,
@@ -31,7 +31,6 @@ module SiEngine
 
     # Originally one method. Now two. See remove_extra_whitespace.
     def cleanup_plain_text(text)
-      text = remove_extra_whitespace(text)
       text.gsub!('>', '> ')
       if text.index('<') && text.index('>') # probably HTML
         text = HTML::FullSanitizer.new.sanitize(text)
@@ -45,6 +44,11 @@ module SiEngine
       text
     end
 
+    # Before uncommenting this method.
+    # TODO: Add wikipedia_text files for training
+    # TODO: Add ClassifierAndSummarization class
+    # TODO: Add EntityExtraction class
+    # TODO: SentimentOfText class
     # def process_text_semantics! text
     #   cs = ClassifierAndSummarization.new
     #   cs.train([['wikipedia_text/computers.txt', "Computers"],
