@@ -23,6 +23,12 @@ Contributing
 * Twitter: [@michaeljprice](https://twitter.com/michaeljprice)
 * Email: <mike@mightystrongmedia.com>
 
+The `develop` branch has been set as the default branch. I use the [git flow](https://github.com/nvie/gitflow) branching model, which is "A collection of Git extensions to provide high-level repository operations for Vincent Driessen's [branching model](http://nvie.com/git-model)."
+
+Please use feature branches, which branch off develop and make pull requests into develop.
+
+If there's a bug found in the master branch, a hotfix may be used to branch off the master. Go to [git flow](https://github.com/nvie/gitflow) to get started.
+
 License
 -------
 MIT-LICENSE
