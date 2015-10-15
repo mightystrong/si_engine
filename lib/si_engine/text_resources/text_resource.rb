@@ -67,5 +67,43 @@ module SiEngine
     #   st = SentimentOfText.new
     #   @sentiment_rating = st.get_sentiment(@plain_text)
     end
+
+    # From src/part1/text-resource.rb. Now an instance method of the TextResource
+    # class and its subclasses.
+    def get_sentence_boundaries
+      # An extension of Ruby Strings was created. See ../ext/string.rb
+      text = self.to_s
+      boundary_list = []
+      start = index = 0
+      current_token = ''
+      text.each_char_with_index_and_current_token do |ch, index, current_token|
+        if ch == ' '
+          current_token = ''
+        elsif ch == '.'
+          current_token += ch
+          if !SiEngine::Engine::HUMAN_NAME_PREFIXES.member?(current_token) &&
+             !SiEngine::Engine::DIGITS.member?(current_token[-2..-2])
+            boundary_list << [start, index]
+            current_token = ''
+            start = index + 2
+          else
+            current_token += ch
+          end
+        elsif ['!', '?'].member?(ch)
+            boundary_list << [start, index]
+            current_token = ''
+            start = index + 2
+        else
+          current_token += ch
+        end
+        index += 1
+      end
+      boundary_list
+    end
+
+    def to_s
+      # An extension of Ruby Strings was created. See ../ext/string.rb
+      SiEngine::String.new(self.plain_text) || ''
+    end
   end
 end
