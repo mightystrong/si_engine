@@ -35,4 +35,4 @@ MIT-LICENSE
 
 Licensing as prescribed by the book:
 
-"The software that I have written for this book is all released under one or more open source licenses. My preference is the Lesser General Public License (LGPL), which allows you to use my code in commercial applications without releasing your own code. But note that if you improve LGPL code, you are required to share your improvements. In some of the book's example, I use other people's open source projects, in which cases I will license my example code with the same licenses used by the authors of those library's."
+"The software that I have written for this book is all released under one or more open source licenses. My preference is the Lesser General Public License (LGPL), which allows you to use my code in commercial applications without releasing your own code. But note that if you improve LGPL code, you are required to share your improvements. In some of the book's example, I use other people's open source projects, in which cases I will license my example code with the same licenses used by the authors of those libraries."
