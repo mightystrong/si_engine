@@ -21,5 +21,10 @@ module SiEngine
     HUMAN_NAME_PREFIXES = ['Mr.', 'Mrs.', 'Ms.', 'Dr.', 'Sr.', 'Maj.', 'St.', 'Lt.', 'Sen.']
     MONTH_ABBR = ['Jan.', 'Feb.', 'Mar.', 'Apr.', "Jun.", 'Jul.', 'Aug.', 'Sep', 'Oct.', 'Nov.', 'Dec.']
     DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+    VALID_WORD_HASH = {}
+    DICTIONARY_WORDS = File.new("#{SiEngine::Engine.root}/app/assets/docs/big.txt").read.downcase.scan(/[a-z]+/)
+    SiEngine::Engine::DICTIONARY_WORDS.each { |word| VALID_WORD_HASH[word] = true }
+    TOKENS_TO_IGNORE = ('a'..'z').collect {|tok| tok if !['a', 'i'].index(tok)} + ['li', 'h1', 'h2', 'br'] - [nil]
   end
 end

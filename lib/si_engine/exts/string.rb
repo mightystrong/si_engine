@@ -29,7 +29,7 @@ module SiEngine
       self.each_char do |ch|
         ret << (String.valid_character?(ch) ? ch : '')
       end
-      ret.split.join(' ')
+      String.new(ret.split.join(' '))
     end
 
     # Split from one to two methods. See remove_noise_characters.
@@ -41,6 +41,23 @@ module SiEngine
       # allow punctuation errors
       return true if [' ', '.', ',', ';', '!'].index(ch)
       return false
+    end
+
+    # Split from one to two methods. See check_valid_word.
+    # See src/part1/remove_noise_characters.rb
+    def remove_words_not_in_spelling_dictionary
+      ret = ''
+      self.gsub('.', ' . ').gsub(',', ' , ').gsub(';', ' ; ').split.each do |word|
+        ret << word + ' ' if String.check_valid_word(word)
+      end
+      String.new(ret.gsub('. .', '.').gsub(', ,', ',').gsub('; ;', ';'))
+    end
+
+    # Split from one to two methods. See remove_words_not_in_spelling_dictionary
+    # See src/part1/remove_noise_characters.rb
+    def self.check_valid_word(word)
+      return false if SiEngine::Engine::TOKENS_TO_IGNORE.index(word)
+      SiEngine::Engine::VALID_WORD_HASH[word] || ['.', ';', ','].index(word)
     end
   end
 end
