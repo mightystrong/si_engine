@@ -23,26 +23,11 @@ gemspec
 
 # Book Examples for PART 1
 # ------------------------
-#
-# Required gems:
-#
-# gem install nokogiri stemmer classifier simplehttp clusterer simple-rss atom rubyzip --no-rdocs --no-ri
-#
-# If you want to use the spelling example, you will need to install the ASpell utilities
-# if they are not already on your system. Run the command "aspell" to see if it is
-# already installed; if not, here is a link: http://aspell.net/man-html/Installing.html
-#
-# On Mac OS X, you can install the MacPorts utility, then do:
-# sudo port install aspell
-#
-# On most Linu systems, you can install ASpell using: // You may also use homebrew
-#
-# apt-get install aspell
-# sudo port install aspell-dict-en
 
-# Chapter 1 - See src/part1/README.txt
-# Included: [rubygems, nokogiri and open-uri]
-# Required in ./si_engine.rb
+# Chapter 1
+# ---------
+# See src/part1/README.txt
+# Included by Rails: [rubygems, nokogiri and open-uri]
 
 # Replaces stemmer, which is not actively maintained.
 gem 'ruby-stemmer'
@@ -55,7 +40,7 @@ gem 'ffi-aspell'
 # gem 'simplehttp'
 # gem 'clusterer'
 
-# Switched rss / atom gems to feedjira, which accomplishes both
+# Switched rss / atom gems to feedjira, which can parse RSS and Atom
 # => gem 'simple-rss'
 # => gem 'atom'
 gem 'feedjira'
