@@ -8,6 +8,8 @@ module SiEngine
       super('')
     end
 
+    # A test file has been provided. Run in the rails console:
+    # => SiEngine::PDFResource.analyze_pdf("{SiEngine::Engine.root/app/assets/docs/colorado_dmv.pdf}")
     def self.analyze_pdf(source_uri='')
       file = PDF::Reader.new(source_uri)
       pdf = PDFResource.new
