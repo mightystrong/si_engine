@@ -14,8 +14,7 @@ TBD
 
 Documentation and Support
 -------------------------
-SiEngine is mountable
-Add `mount SiEngine::Engine => "/si_engine"` to your `config/routes.rb` file.
+SiEngine is mountable. Add `mount SiEngine::Engine => "/si_engine"` to your `config/routes.rb` file.
 
 Contributing
 ------------
