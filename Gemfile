@@ -76,3 +76,6 @@ gem 'pdf-reader'
 # gem 'word-to-markdown' # Optional
 # Antiword is used to create a MSWordResource instance.
 gem 'antiword', git: 'git://github.com/yagudaev/ruby-antiword.git'
+
+# This gem is used to provide functionality for the GNU Metadata Extractor Library
+gem 'ffi-extractor'

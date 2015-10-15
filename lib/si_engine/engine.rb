@@ -10,6 +10,7 @@ include REXML
 require "pdf/reader"
 # require "word-to-markdown" # Optional
 require "antiword"
+require "ffi/extractor"
 
 module SiEngine
   class Engine < ::Rails::Engine
