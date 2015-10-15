@@ -7,6 +7,7 @@ require "feedjira"
 require "rexml/document"
 require "rexml/streamlistener"
 include REXML
+require "pdf/reader"
 
 module SiEngine
   class Engine < ::Rails::Engine

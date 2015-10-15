@@ -40,6 +40,10 @@ gemspec
 # apt-get install aspell
 # sudo port install aspell-dict-en
 
+# Chapter 1 - See src/part1/README.txt
+# Included: [rubygems, nokogiri and open-uri]
+# Required in ./si_engine.rb
+
 gem 'ruby-stemmer' # Replaces stemmer, which is not maintained.
 # Aspell for spell checking: https://github.com/YorickPeterse/ffi-aspell
 # At the time the book was written, no gem was available for aspell
@@ -59,6 +63,7 @@ gem 'rubyzip'
 # Include in the same was a documented in
 gem 'rubysl-rexml'
 
-# Chapter 1 - See src/part1/README.txt
-# Included: [rubygems, nokogiri and open-uri]
-# Required in ./si_engine.rb
+# This is to handle PDF files. The book originally recommended pdftotext
+# pdf-reader allows you to handle PDF files natively within the ruby application
+# The gem is outdate and appears to no longer be maintained. Recommend a better one?
+gem 'pdf-reader'

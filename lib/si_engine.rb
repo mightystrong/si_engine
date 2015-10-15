@@ -6,6 +6,7 @@ require "si_engine/text_resources/binary_text_resource"
 require "si_engine/text_resources/html_xhtml_resource"
 require "si_engine/text_resources/open_document_resource"
 require "si_engine/text_resources/rss_atom_resource"
+require "si_engine/text_resources/pdf_resource"
 
 module SiEngine
 end
