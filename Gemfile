@@ -44,17 +44,20 @@ gemspec
 # Included: [rubygems, nokogiri and open-uri]
 # Required in ./si_engine.rb
 
-gem 'ruby-stemmer' # Replaces stemmer, which is not maintained.
+# Replaces stemmer, which is not actively maintained.
+gem 'ruby-stemmer'
+
 # Aspell for spell checking: https://github.com/YorickPeterse/ffi-aspell
 # At the time the book was written, no gem was available for aspell
 gem 'ffi-aspell'
+
 # gem 'classifier'
 # gem 'simplehttp'
 # gem 'clusterer'
 
 # Switched rss / atom gems to feedjira, which accomplishes both
-# gem 'simple-rss'
-# gem 'atom'
+# => gem 'simple-rss'
+# => gem 'atom'
 gem 'feedjira'
 
 gem 'rubyzip'
@@ -65,11 +68,11 @@ gem 'rubysl-rexml'
 
 # This is to handle PDF files. The book originally recommended pdftotext
 # pdf-reader allows you to handle PDF files natively within the ruby application
-# The gem is outdate and appears to no longer be maintained. Recommend a better one?
+# The gem is outdated and appears to no longer be maintained. Recommend a better one?
 gem 'pdf-reader'
 
-# This is to handle Microsoft Word documents and allows you to handle within a
+# These are to handle Microsoft Word documents and allows you to handle within a
 # Ruby environment instead of in the console.
-gem 'word-to-markdown'
-
+# gem 'word-to-markdown' # Optional
+# Antiword is used to create a MSWordResource instance.
 gem 'antiword', git: 'git://github.com/yagudaev/ruby-antiword.git'

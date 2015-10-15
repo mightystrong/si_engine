@@ -8,7 +8,7 @@ require "rexml/document"
 require "rexml/streamlistener"
 include REXML
 require "pdf/reader"
-require "word-to-markdown"
+# require "word-to-markdown" # Optional
 require "antiword"
 
 module SiEngine
