@@ -67,3 +67,9 @@ gem 'rubysl-rexml'
 # pdf-reader allows you to handle PDF files natively within the ruby application
 # The gem is outdate and appears to no longer be maintained. Recommend a better one?
 gem 'pdf-reader'
+
+# This is to handle Microsoft Word documents and allows you to handle within a
+# Ruby environment instead of in the console.
+gem 'word-to-markdown'
+
+gem 'antiword', git: 'git://github.com/yagudaev/ruby-antiword.git'

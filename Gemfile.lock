@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/yagudaev/ruby-antiword.git
+  revision: 8343135d26dba8eb46667f3a48238223ea6cf051
+  specs:
+    antiword (0.37)
+
 PATH
   remote: .
   specs:
@@ -43,9 +49,14 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.3.8)
     afm (0.2.2)
     arel (6.0.3)
     builder (3.2.2)
+    cliver (0.3.2)
+    css_parser (1.3.7)
+      addressable
+    descriptive_statistics (2.5.1)
     erubis (2.7.0)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
@@ -62,6 +73,7 @@ GEM
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     hashery (2.1.1)
+    htmlentities (4.3.4)
     i18n (0.7.0)
     json (1.8.3)
     loofah (2.0.3)
@@ -74,12 +86,17 @@ GEM
     multipart-post (2.0.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    nokogiri-styles (0.1.2)
+      nokogiri
     pdf-reader (1.3.3)
       Ascii85 (~> 1.0.0)
       afm (~> 0.2.0)
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
+    premailer (1.8.6)
+      css_parser (>= 1.3.6)
+      htmlentities (>= 4.0.0)
     rack (1.6.4)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -108,6 +125,8 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
+    reverse_markdown (0.8.2)
+      nokogiri
     ruby-rc4 (0.1.5)
     ruby-stemmer (0.9.6)
     rubysl-rexml (2.0.4)
@@ -120,16 +139,25 @@ GEM
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
     sqlite3 (1.3.11)
+    sys-proctable (0.9.8)
     thor (0.19.1)
     thread_safe (0.3.5)
     ttfunk (1.4.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    word-to-markdown (1.1.5)
+      cliver (~> 0.3)
+      descriptive_statistics (~> 2.5)
+      nokogiri-styles (~> 0.1)
+      premailer (~> 1.8)
+      reverse_markdown (~> 0.6)
+      sys-proctable (~> 0.9)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  antiword!
   feedjira
   ffi-aspell
   pdf-reader
@@ -138,6 +166,7 @@ DEPENDENCIES
   rubyzip
   si_engine!
   sqlite3
+  word-to-markdown
 
 BUNDLED WITH
    1.10.6

@@ -8,6 +8,8 @@ require "rexml/document"
 require "rexml/streamlistener"
 include REXML
 require "pdf/reader"
+require "word-to-markdown"
+require "antiword"
 
 module SiEngine
   class Engine < ::Rails::Engine
