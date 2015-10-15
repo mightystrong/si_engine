@@ -17,5 +17,30 @@ module SiEngine
         yield(ch, @index, @current_token)
       end
     end
+
+    # Split from one to two methods. See valid_character.
+    # From src/part1/remove_noise_characters.rb
+    # To test run:
+    # path = "#{SiEngine::Engine.root}/app/assets/docs/noise.txt"
+    # resource = PlainTextResource.new(path)
+    # resource.to_s.remove_noise_characters
+    def remove_noise_characters
+      ret = ''
+      self.each_char do |ch|
+        ret << (String.valid_character?(ch) ? ch : '')
+      end
+      ret.split.join(' ')
+    end
+
+    # Split from one to two methods. See remove_noise_characters.
+    # From src/part1/remove_noise_characters.rb
+    def self.valid_character?(ch)
+      return true if ch >= 'a' and ch <= 'z'
+      return true if ch >= 'A' and ch <= 'Z'
+      return true if ch >= '0' and ch <= '9'
+      # allow punctuation errors
+      return true if [' ', '.', ',', ';', '!'].index(ch)
+      return false
+    end
   end
 end
