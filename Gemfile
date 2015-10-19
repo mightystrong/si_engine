@@ -68,5 +68,13 @@ gem 'ffi-extractor'
 gem 'classifier'
 # NOT COMPATIBLE. gem 'gsl' # Recommended by classifier gem to speed up processing.
 
+# See - https://github.com/PRX/open_calais
+gem 'open_calais'
+
 # gem 'simplehttp'
 # gem 'clusterer'
+
+group :development, :test do
+  # See Figaro - https://github.com/laserlemon/figaro
+  gem 'figaro'
+end

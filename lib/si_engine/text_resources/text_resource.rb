@@ -45,27 +45,24 @@ module SiEngine
       text
     end
 
-    # Before uncommenting this method.
-    # TODO: Add wikipedia_text files for training
-    # TODO: Add ClassifierAndSummarization class
-    # TODO: Add EntityExtraction class
-    # TODO: SentimentOfText class
-    def process_text_semantics! text
-    #   cs = ClassifierAndSummarization.new
-    #   cs.train([['wikipedia_text/computers.txt', "Computers"],
-    #            ['wikipedia_text/economy.txt', "Economy"],
-    #            ['wikipedia_text/health.txt', "Health"],
-    #            ['wikipedia_text/software.txt', "Software"]])
-    #   results = cs.classify_and_summarize_plain_text(@plain_text)
-    #   @categories = results[0]
-    #   @summary = results[1]
-    #   @summary = @title + ". " + @summary if @title.length > 1
-    #   @sentence_boundaries = get_sentence_boundaries(@plain_text)
-    #   ee = EntityExtraction.new(@plain_text)
-    #   @human_names = ee.human_names
-    #   @place_names = ee.place_names
-    #   st = SentimentOfText.new
-    #   @sentiment_rating = st.get_sentiment(@plain_text)
+    def process_text_semantics!(text)
+      # It appears that the text argument isn't used at all. Keeping in the event
+      # it's used in later chapters. Currently in Chapter 3.
+      cs = ClassifierAndSummarization.new
+      cs.train([["#{SiEngine::Engine.root}/app/docs/wikipedia_text/computers.txt", "Computers"],
+               ["#{SiEngine::Engine.root}/app/docs/wikipedia_text/economy.txt", "Economy"],
+               ["#{SiEngine::Engine.root}/app/docs/wikipedia_text/health.txt", "Health"],
+               ["#{SiEngine::Engine.root}/app/docs/wikipedia_text/software.txt", "Software"]])
+      results = cs.classify_and_summarize_plain_text(@plain_text)
+      @categories = results[0]
+      @summary = results[1]
+      @summary = @title + ". " + @summary if @title.length > 1
+      @sentence_boundaries = self.get_sentence_boundaries
+      ee = EntityExtraction.new(@plain_text)
+      @human_names = ee.human_names
+      @place_names = ee.place_names
+      st = SentimentOfText.new
+      @sentiment_rating = st.get_sentiment(@plain_text)
     end
 
     # From src/part1/text-resource.rb. Now an instance method of the TextResource

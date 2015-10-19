@@ -10,6 +10,12 @@ require "si_engine/text_resources/pdf_resource"
 require "si_engine/text_resources/ms_word_resource"
 require "si_engine/exts/string.rb"
 require "si_engine/nlp/classifier_word_count_statistics"
+require "si_engine/nlp/bayesian_classifier"
+require "si_engine/nlp/latent_semantic_analysis_classifier"
+require "si_engine/nlp/classifier_and_summarization"
+require "si_engine/nlp/data_constants"
+require "si_engine/nlp/entity_extraction"
+require "si_engine/nlp/sentiment_of_text"
 
 module SiEngine
 end
