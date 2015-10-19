@@ -8,19 +8,16 @@ This application requires:
 - Ruby 2.2.3
 - Rails 4.2.4
 
-Environment Variables
----------------------
-TBD
-
 Documentation and Support
 -------------------------
 SiEngine is mountable. Add `mount SiEngine::Engine => "/si_engine"` to your `config/routes.rb` file.
 
-
-Special Setup
--------------
+Environment Variables
+---------------------
 
 *Open Calais:*
+
+`=> ENV["open_calais"]`
 
 Get an Open Calais API Key at: <http://new.opencalais.com/>
 
