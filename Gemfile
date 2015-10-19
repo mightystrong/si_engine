@@ -63,7 +63,10 @@ gem 'antiword', git: 'git://github.com/yagudaev/ruby-antiword.git'
 gem 'ffi-extractor'
 
 # Chapter 3
+# ---------
 
 gem 'classifier'
+# NOT COMPATIBLE. gem 'gsl' # Recommended by classifier gem to speed up processing.
+
 # gem 'simplehttp'
 # gem 'clusterer'
