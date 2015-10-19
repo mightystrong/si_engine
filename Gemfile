@@ -36,9 +36,6 @@ gem 'ruby-stemmer'
 # At the time the book was written, no gem was available for aspell
 gem 'ffi-aspell'
 
-# gem 'classifier'
-# gem 'simplehttp'
-# gem 'clusterer'
 
 # Switched rss / atom gems to feedjira, which can parse RSS and Atom
 # => gem 'simple-rss'
@@ -64,3 +61,9 @@ gem 'antiword', git: 'git://github.com/yagudaev/ruby-antiword.git'
 
 # This gem is used to provide functionality for the GNU Metadata Extractor Library
 gem 'ffi-extractor'
+
+# Chapter 3
+
+gem 'classifier'
+# gem 'simplehttp'
+# gem 'clusterer'
