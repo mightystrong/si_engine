@@ -2,25 +2,24 @@ SI Engine (Scripting Intelligence)
 ==================================
 This project is an attempt to port the code from the book [Scripting Intelligence](http://www.apress.com/9781430223511) by Mark Watson into a Ruby on Rails Engine.
 
+Currently, the project only includes code from Part 1 of the book.
+
 Requirements
 ------------
 This application requires:
 - Ruby 2.2.3
 - Rails 4.2.4
 
-Environment Variables
----------------------
-TBD
-
 Documentation and Support
 -------------------------
 SiEngine is mountable. Add `mount SiEngine::Engine => "/si_engine"` to your `config/routes.rb` file.
 
-
-Special Setup
--------------
+Environment Variables
+---------------------
 
 *Open Calais:*
+
+`=> ENV["open_calais"]`
 
 Get an Open Calais API Key at: <http://new.opencalais.com/>
 
