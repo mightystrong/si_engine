@@ -5,7 +5,10 @@ module SiEngine
     def initialize
       @category_names = []
       @category_wc_hashes = []
-      @noise_words = ['the', 'a', 'at', 'he', 'she', 'it', 'is'] # added 'is'
+      # Stop words may be found at a new link not referenced in the book:
+      # http://ir.dcs.gla.ac.uk/resources/linguistic_utils/stop_words (See pg 38.)
+      # Added a contant STOP_WORDS to ../engine.rb
+      @noise_words = SiEngine::Engine::STOP_WORDS
     end
 
     def classify_plain_text(text)
@@ -40,10 +43,10 @@ module SiEngine
   end
 end
 
-#test = SiEngine::ClassifierWordCountStatistics.new
-#test.train([["#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/computers.txt", "Computers"],
+# test = SiEngine::ClassifierWordCountStatistics.new
+# test.train([["#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/computers.txt", "Computers"],
 #            ["#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/economy.txt", "Economy"],
 #            ["#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/health.txt", "Health"],
 #            ["#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/software.txt", "Software"]])
-#require 'pp'
-#pp test.classify_plain_text("Heart attacks and strokes kill too many people every year.")
+# require 'pp'
+# pp test.classify_plain_text("Heart attacks and strokes kill too many people every year.")
