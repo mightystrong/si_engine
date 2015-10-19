@@ -36,11 +36,11 @@ After setup the following should work:
 
   `$ rails console`
 
-  `> client = OpenCalais::Client.new`
+  `client = OpenCalais::Client.new`
 
-  `> results = client.enrich('Ruby on Rails is a fantastic web framework. It uses MVC, and the Ruby programming language invented by Matz in Japan.')`  
+  `results = client.enrich('Ruby on Rails is a fantastic web framework. It uses MVC, and the Ruby programming language invented by Matz in Japan.')`  
 
-  `> => #<OpenCalais::Response:0x007fae99575ba8...``
+  `=> #<OpenCalais::Response:0x007fae99575ba8...``
 
 Contributing
 ------------
