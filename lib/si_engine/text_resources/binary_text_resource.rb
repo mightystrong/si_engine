@@ -12,18 +12,14 @@ module SiEngine
       super(source_uri)
       file = open(source_uri)
       text = file.read
-      text = remove_noise_characters(text)
-      text = remove_words_not_in_spelling_dictionary(text)
       @plain_text = cleanup_plain_text(text)
+      @plain_text = self.to_s.remove_noise_characters
+      @plain_text = self.to_s.remove_words_not_in_spelling_dictionary
       process_text_semantics!(@plain_text) # Added the !. Missing from original file.
-    end
-
-    def remove_noise_characters(text)
-      text # stub: will be implemented in chapter 2
-    end
-
-    def remove_words_not_in_spelling_dictionary(text)
-      text # stub: will be implemented in chapter 2
     end
   end
 end
+
+# test = SiEngine::BinaryTextResource.new("#{SiEngine::Engine.root}/app/assets/docs/noise.txt")
+# test.plain_text
+# => "amp ; . your physician or any information contained on or in any product "
