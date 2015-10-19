@@ -10,3 +10,6 @@ test/dummy/.sass-cache
 # Ignore temporary word files
 ~$*.docx
 ~$*.doc
+
+# Ignore secret keys
+application.yml
