@@ -2,6 +2,8 @@ SI Engine (Scripting Intelligence)
 ==================================
 This project is an attempt to port the code from the book [Scripting Intelligence](http://www.apress.com/9781430223511) by Mark Watson into a Ruby on Rails Engine.
 
+Currently, the project only includes code from Part 1 of the book.
+
 Requirements
 ------------
 This application requires:
