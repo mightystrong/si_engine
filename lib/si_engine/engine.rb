@@ -11,6 +11,7 @@ require "pdf/reader"
 # require "word-to-markdown" # Optional
 require "antiword"
 require "ffi/extractor"
+require "classifier"
 
 module SiEngine
   class Engine < ::Rails::Engine
@@ -26,7 +27,7 @@ module SiEngine
     DICTIONARY_WORDS = File.new("#{SiEngine::Engine.root}/app/assets/docs/big.txt").read.downcase.scan(/[a-z]+/)
     SiEngine::Engine::DICTIONARY_WORDS.each { |word| VALID_WORD_HASH[word] = true }
     TOKENS_TO_IGNORE = ('a'..'z').collect {|tok| tok if !['a', 'i'].index(tok)} + ['li', 'h1', 'h2', 'br'] - [nil]
-    # Stop words may be found at a new link not referenced in the book:
+    # Stop words may be found at a new link not referenced in the book (See pg 38.):
     # http://ir.dcs.gla.ac.uk/resources/linguistic_utils/stop_words
     STOP_WORDS = [ "a", "about", "above", "across", "after", "afterwards", "again",
       "against", "all", "almost", "alone", "along", "already", "also", "although",
