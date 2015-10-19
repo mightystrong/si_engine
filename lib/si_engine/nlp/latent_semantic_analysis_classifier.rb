@@ -27,15 +27,14 @@ module SiEngine
 end
 
 # test = SiEngine::LatentSemanticAnalysisClassifier.new
-# test.train([['wikipedia_text/computers.txt', "Computers"],
-#            ['wikipedia_text/economy.txt', "Economy"],
-#            ['wikipedia_text/health.txt', "Health"],
-#            ['wikipedia_text/software.txt', "Software"]])
-# require 'pp'
+# test.train([["#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/computers.txt", "Computers"],
+#            ["#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/economy.txt", "Economy"],
+#            ["#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/health.txt", "Health"],
+#            ["#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/software.txt", "Software"]])
 # pp test.classify_plain_text("Heart attacks and strokes kill too many people every year.")
 # pp test.classify_plain_text("Economic warfare rich versus the poor over international monetary fund.")
 # pp test.classify_plain_text("My IBM PC broke so I bought an HP.")
-# text = File.new('wikipedia_text/health.txt').read[0..700]
+# text = File.new("#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/health.txt").read[0..700]
 # puts text
 # puts "** summary:"
 # summary = test.get_summary(text)

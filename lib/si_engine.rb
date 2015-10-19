@@ -11,6 +11,7 @@ require "si_engine/text_resources/ms_word_resource"
 require "si_engine/exts/string.rb"
 require "si_engine/nlp/classifier_word_count_statistics"
 require "si_engine/nlp/bayesian_classifier"
+require "si_engine/nlp/latent_semantic_analysis_classifier"
 
 module SiEngine
 end

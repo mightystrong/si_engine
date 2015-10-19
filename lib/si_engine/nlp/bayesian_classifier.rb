@@ -22,5 +22,4 @@ end
 #            ["#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/economy.txt", "Economy"],
 #            ["#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/health.txt", "Health"],
 #            ["#{SiEngine::Engine.root}/app/assets/docs/wikipedia_text/software.txt", "Software"]])
-# require 'pp'
 # pp test.classify_plain_text("Heart attacks and strokes kill too many people every year.")
