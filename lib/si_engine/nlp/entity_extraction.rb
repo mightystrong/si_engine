@@ -107,9 +107,34 @@ module SiEngine
       end
       false
     end
+
+    # Ported from src/part1/find_common_names.rb and changed to a class method
+    # of the EntityExtraction class.
+    # Not sure if this was the best place to put it but it seemed to be the
+    # most appropriate. (From pg. 63-64)
+    def self.find_common_names(*file_paths)
+      names_texts = file_paths.map { |file_path| File.new(file_path).read }
+      extractors = names_texts.map { |file_path| self.new(file_path) }
+
+      names_lists = extractors.map { |extractor| extractor.human_names }
+      common_names = names_lists.pop
+      names_lists.each { |nlist| common_names = common_names & nlist }
+
+      places_lists = extractors.map { |extractor| extractor.place_names }
+      common_places = places_lists.pop
+      places_lists.each { |nlist| common_places = common_places & nlist }
+
+      [common_names, common_places]
+    end
   end
 end
 
 # test = SiEngine::EntityExtraction.new('President George W. Bush left office and Barack Obama was sworn in as president and went to Florida with his family to stay at Disneyland.')
 # pp test.human_names
 # pp test.place_names
+
+# See pg. 63-64
+# barack = "#{SiEngine::Engine.root}/app/assets/docs/test_data/wikipedia_barack_obama.txt"
+# hillary = "#{SiEngine::Engine.root}/app/assets/docs/test_data/wikipedia_hillary_clinton.txt"
+# results = SiEngine::EntityExtraction.find_common_names(barack, hillary)
+# => [["Barack Obama", "John McCain"], ["Chicago", "Iraq", "Illinois", "Washington", "Columbia", "World"]]
