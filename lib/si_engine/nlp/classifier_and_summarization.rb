@@ -1,4 +1,4 @@
-# This file was original in src/part1/classification_and_summarization_using_classifier_gem.rb
+# This file was originally in src/part1/classification_and_summarization_using_classifier_gem.rb
 
 module SiEngine
   class ClassifierAndSummarization
