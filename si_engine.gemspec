@@ -9,12 +9,12 @@ Gem::Specification.new do |s|
   s.version     = SiEngine::VERSION
   s.authors     = ["Michael Price"]
   s.email       = ["mike@mightystrongmedia.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of SiEngine."
-  s.description = "TODO: Description of SiEngine."
+  s.homepage    = "https://github.com/mightystrong/si_engine"
+  s.summary     = "SI Engine"
+  s.description = "This project is an attempt to port the code from the book Scripting Intelligence by Mark Watson into a Ruby on Rails Engine"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 4.2.4"
