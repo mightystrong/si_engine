@@ -15,6 +15,7 @@ require "si_engine/nlp/latent_semantic_analysis_classifier"
 require "si_engine/nlp/classifier_and_summarization"
 require "si_engine/nlp/data_constants"
 require "si_engine/nlp/entity_extraction"
+require "si_engine/nlp/sentiment_of_text"
 
 module SiEngine
 end

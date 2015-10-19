@@ -32,6 +32,16 @@ module SiEngine
       end
     end
 
+    # Ported from src/part1/sentiment-of-text.rb
+    def get_sentiment(text)
+      word_stems = text.downcase.scan(/[a-z]+/)
+      scores = Array.new(2)
+      2.times do |i|
+        scores[i] = score(@category_wc_hashes[i], word_stems)
+      end
+      scores[0] - scores[1]
+    end
+
     private
       def score(hash, word_list)
         score = 0
