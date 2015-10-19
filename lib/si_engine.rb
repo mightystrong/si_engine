@@ -13,7 +13,8 @@ require "si_engine/nlp/classifier_word_count_statistics"
 require "si_engine/nlp/bayesian_classifier"
 require "si_engine/nlp/latent_semantic_analysis_classifier"
 require "si_engine/nlp/classifier_and_summarization"
-require "si_engine/nlp/data_constants.rb"
+require "si_engine/nlp/data_constants"
+require "si_engine/nlp/entity_extraction"
 
 module SiEngine
 end
