@@ -26,21 +26,21 @@ Get an Open Calais API Key at: <http://new.opencalais.com/>
 
 Create an `open_calais.rb` file in `config/initializers`:
 
-  `require 'open_calais'
+  `require 'open_calais'`
 
-  OpenCalais.configure do |c|  
-    c.api_key = "add your key here"  
-  end`
+  `OpenCalais.configure do |c|`  
+    `c.api_key = "add your key here"`  
+  `end`
 
 After setup the following should work:
 
-  `$ rails console  
+  `$ rails console`
 
-  > client = OpenCalais::Client.new  
+  `> client = OpenCalais::Client.new`
 
-  > results = client.enrich('Ruby on Rails is a fantastic web framework. It uses MVC, and the Ruby programming language invented by Matz in Japan.')  
+  `> results = client.enrich('Ruby on Rails is a fantastic web framework. It uses MVC, and the Ruby programming language invented by Matz in Japan.')`  
 
-  > => #<OpenCalais::Response:0x007fae99575ba8...`
+  `> => #<OpenCalais::Response:0x007fae99575ba8...``
 
 Contributing
 ------------
