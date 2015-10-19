@@ -46,11 +46,8 @@ module SiEngine
     end
 
     # Before uncommenting this method.
-    # TODO: Add wikipedia_text files for training
-    # TODO: Add ClassifierAndSummarization class
-    # TODO: Add EntityExtraction class
     # TODO: SentimentOfText class
-    def process_text_semantics! text
+    def process_text_semantics!(text)
     #   cs = ClassifierAndSummarization.new
     #   cs.train([['wikipedia_text/computers.txt', "Computers"],
     #            ['wikipedia_text/economy.txt', "Economy"],
