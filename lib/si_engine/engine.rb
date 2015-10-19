@@ -12,6 +12,7 @@ require "pdf/reader"
 require "antiword"
 require "ffi/extractor"
 require "classifier"
+require "open_calais"
 
 module SiEngine
   class Engine < ::Rails::Engine
